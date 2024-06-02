@@ -1,7 +1,6 @@
 "use client";
-import { SignInButton, UserButton } from "@clerk/nextjs";
+import { SignInButton, SignOutButton, UserButton } from "@clerk/nextjs";
 import { Authenticated, Unauthenticated } from "convex/react";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,6 +10,7 @@ export default function Home() {
       </Unauthenticated>
       <Authenticated>
         <UserButton />
+        <SignOutButton />
         <h1>CONTENT</h1>
       </Authenticated>
     </main>
