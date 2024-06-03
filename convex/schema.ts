@@ -9,4 +9,12 @@ export default defineSchema({
     tokenIdentifier: v.string(),
     price: v.number(),
   }).index("by_tokenIdentifier", ["tokenIdentifier"]),
+  transactions: defineTable({
+    stripeId: v.string(),
+    amount: v.number(),
+    plan: v.string(),
+    credits: v.number(),
+    buyerId: v.string(),
+    createdAt: v.string(),
+  }),
 });
